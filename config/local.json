@@ -1,0 +1,19 @@
+{
+    "global": {
+        "JAVA_PORT" : "7001",
+        "assetserver":"",
+//        "URL": "mongodb://127.0.0.1:27017/hanstyle",
+        "URL": "mongodb://121.41.83.170:27017/hanstyle",
+        "COOKIE_SECRET" : "hanstyle", 
+        "USERNAME": "",
+        "PASSWORD": "",
+        "uploaddir" : "/root/www/imagesupload",
+                "env":"local"
+
+    },
+    "logger" : {
+        "stderr"      : false,
+        "level"       : "INFO",
+        "stdoutLevel" : "INFO"
+    }
+}

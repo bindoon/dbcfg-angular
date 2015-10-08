@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>textAngular 1.4.3 Demo</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="//g.alicdn.com/sui/sui3/0.0.13/css/sui.css">
+    <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'>
+    <style>
+    .ta-editor {
+        min-height: 300px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+    </style>
+
+    <script src="bower_components/angular/angular.js"></script>
+    
+    <link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
+<script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
+</head>
+
+<body>
+    <div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
+        <h1>Editor</h1>
+        <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button>
+        <button ng-click="click()">Disable text-angular Toggle</button>
+        <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+        <h1>Raw HTML in a text area</h1>
+        <textarea ng-model="htmlcontent" style="width: 100%"></textarea>
+        <h1>Bound with ng-bind-html</h1>
+        <div ng-bind-html="htmlcontent"></div>
+        <h1>Bound with ta-bind, our internal html-binding directive</h1>
+        <div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div>
+        <button type="button" ng-click="htmlcontent = orightml">Reset</button>
+        <p>Note: although we support classes and styles, angularjs' ng-bind-html directive will strip out all style attributes.</p>
+        <h1>Option to masquerade as a fancy text-area - complete with form submission and optional ngModel</h1>
+        <text-angular name="htmlcontent" ng-model="htmlcontenttwo">
+            <p>Any <b>HTML</b> we put in-between the text-angular tags gets automatically put into the editor if there <strong style="font-size: 12pt;"><u><em>is not</em></u></strong> a value assigned to the ngModel.</p>
+            <p>If there is a value assigned to the ngModel, it replaces any html here. To see this, uncomment the line at the bottom of demo.html</p>
+        </text-angular>
+        <h1>Bound with ta-bind, our internal html-binding directive</h1>
+        <div ta-bind="text" ng-model="htmlcontenttwo" ta-readonly='disabled'></div>
+    </div>
+
+
+    <script type="text/javascript">
+    angular.module("textAngularTest", ['textAngular'])
+        .controller('wysiwygeditor', function wysiwygeditor($scope) {
+            $scope.orightml = 'test';
+            $scope.htmlcontent = 'dfdfdfdfddfdfdf';
+            $scope.disabled = false;
+
+            $scope.click=function(){
+                $scope.htmlcontent = 'a';
+            }
+
+        });
+    </script>
+</body>
+
+</html>

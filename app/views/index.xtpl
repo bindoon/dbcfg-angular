@@ -1,0 +1,6 @@
+{{extend ("./layout/default-layout") }}
+
+{{#block ("content") }}
+    <h1>{{title}}<h1>
+    <p> welcome <p>
+{{/block}}

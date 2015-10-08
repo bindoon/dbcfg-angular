@@ -1,0 +1,16 @@
+{
+    "global": {
+        "JAVA_PORT" : "7001",
+        "assetserver":"",
+        "URL": "mongodb://127.0.0.1:27017/hanstyle",
+        "COOKIE_SECRET" : "hanstyle", 
+        "USERNAME": "",
+        "PASSWORD": "",
+        "env":"base"
+    },
+    "logger" : {
+        "stderr"      : false,
+        "level"       : "INFO",
+        "stdoutLevel" : "INFO"
+    }
+}

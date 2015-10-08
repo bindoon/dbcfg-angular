@@ -1,0 +1,7 @@
+<div class="page-notification-wrap page-notification-bottom-right">
+    <div ng-repeat="notify in messages" ng-show="notify.time !== -3" class="page-notification page-notification-{{notify.msg.type}}">
+        <button ng-show="notify.time !==-2" ng-click="hide($index)" class="page-notification-close-button">×</button>
+        <div class="page-notification-message" ng-bind-html="notify.msg.content">
+        </div>
+    </div>
+</div>

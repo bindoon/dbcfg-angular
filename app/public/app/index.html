@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css'>
+    <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'>
+    <link rel='stylesheet' href='bower_components/jsoneditor/jsoneditor.css'>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- endbuild -->
+  </head>
+  <body ng-app="dashboardApp" >
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="topbar-wrap white">
+        <div class="topbar-inner clearfix">
+            <div class="topbar-logo-wrap clearfix">
+                <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+                <ul class="navbar-list clearfix">
+                    <li><a class="on" href="index.html">首页</a></li>
+                    <li><a href="#" target="_blank">网站首页</a></li>
+                </ul>
+            </div>
+            <div class="top-info-wrap">
+                <ul class="top-info-list clearfix">
+                    <li><a href="javascript:;">管理员</a></li>
+                    <li><a href="javascript:;">修改密码</a></li>
+                    <li><a href="javascript:;">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ng-controller="MainCtrl">
+      <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content" >
+            <ul ng-cloak class="sidebar-list" ng-init="routes=[
+              {
+                name: '常用操作', router:'/app', href:'javascript:;',
+                subroutes:[
+                  {name: '类目管理', router:'/dbcfg/category'},
+                  {name: '专家管理', router:'/dbcfg/expert'},
+                  {name: '博文管理', router:'/dbcfg/article'},
+                  {name: '首页管理', router:'/dbcfg/indexdata'},
+                  {name: '接口配置', router:'/dbcfg/cgicfg'}
+                ]
+              }
+            ]">
+              <li ng-repeat="route in routes">
+                  <a href="javascript:;">{{route.name}}</a>
+                  <ul class="sub-menu" ng-if="route.subroutes">
+                      <li ng-repeat="subroute in route.subroutes" class={{subroute.class}} ng-class="{'on':checkActive(currentActiveRoute, subroute.router)}"><a ng-href="#{{subroute.router}}">{{subroute.name}}</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="main-wrap" ng-view >
+
+      </div>
+    </div>
+
+    <div msg-box></div>
+    <div editor-container ></div>
+    <div jsoneditor-container ></div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+    <script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+    <script src='bower_components/textAngular/dist/textAngular.min.js'></script>
+    <script src='bower_components/jsoneditor/jquery.jsoneditor.js'></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/dbcfg.js"></script>
+    <script src="scripts/directives/mydirective.js"></script>
+    <script src="scripts/templates/base.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

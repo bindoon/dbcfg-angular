@@ -1,0 +1,142 @@
+.ui-colorpicker-palette {
+	overflow: hidden;
+	margin: 5px;
+}
+
+.ui-colorpicker-picker {
+	position: relative;
+	overflow: hidden;
+	height: 265px;
+	width: 304px;
+	float: left;
+}
+
+.ui-colorpicker-picker div {
+	cursor: url('images/colorpicker/picker.cur'), crosshair;
+    position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+}
+
+.ui-colorpicker-picker .ui-colorpicker-canvas,
+.ui-colorpicker-picker .ui-colorpicker-overlay {
+	width: 256px;
+	height: 256px;
+	overflow: hidden;
+}
+
+.ui-colorpicker-picker .ui-colorpicker-canvas,
+.ui-colorpicker-picker .ui-colorpicker-overlay,
+.ui-colorpicker-picker .ui-colorpicker-slider {
+	border: 1px solid #CCC;
+}
+
+.ui-colorpicker-picker .ui-colorpicker-canvas {
+	background: url('images/colorpicker/canvas.png') no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/colorpicker/canvas.png', sizingMethod='scale');
+}
+
+.ui-colorpicker-picker .ui-colorpicker-overlay {
+	background: url('images/colorpicker/overlay.png') no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/colorpicker/overlay.png', sizingMethod='scale');
+}
+
+.ui-colorpicker-picker .ui-colorpicker-marker {
+	background: url('images/colorpicker/marker.gif') no-repeat;
+	height: 12px;
+	width: 12px;
+}
+
+.ui-colorpicker-picker .ui-colorpicker-slider {
+	background: url('images/colorpicker/slider.png') no-repeat;
+	height: 256px;
+	width: 19px;
+	left: 272px;
+}
+
+.ui-colorpicker-picker .ui-colorpicker-slider-handle {
+	background: url('images/colorpicker/slider-handle.gif') no-repeat;
+	height: 9px;
+	width: 41px;
+	top: 250px;
+	left: -11px;
+}
+
+.ui-colorpicker-picker .ui-colorpicker-slider,
+.ui-colorpicker-picker .ui-colorpicker-slider-handle {
+	cursor: crosshair;
+}
+
+.ui-colorpicker-adjust {
+	overflow: hidden;
+	padding: 0 5px;
+	font: 12px/20px normal;
+}
+
+.ui-colorpicker-adjust input {
+	width: 50px;
+	height: 20px;
+	margin: 0 3px;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-booth {
+	border: 1px solid #000;
+	background-color: #000;
+	margin: 0 0 8px 33px;
+	position: relative;
+	height: 50px;
+	width: 50px;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-backup-color,
+.ui-colorpicker-adjust .ui-colorpicker-current-color {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 25px;
+	z-index: 3;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-current-color {
+	cursor: pointer;
+	height: 50px;
+	z-index: 2;
+}
+
+.ui-colorpicker-adjust label {
+	float: left;
+	width: 100%;
+	padding: 1px 0 2px;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-rgb,
+.ui-colorpicker-adjust .ui-colorpicker-hsl,
+.ui-colorpicker-adjust .ui-colorpicker-hex {
+	overflow: hidden;
+}
+
+.ui-colorpicker-adjust em {
+	float: left;
+	text-align: right;
+	line-height: 22px;
+	cursor: pointer;
+	width: 16px;
+	padding: 0 7px;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-hex em {
+	width: 26px;
+	padding: 0 2px;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-hsl {
+	margin: 5px 0;
+}
+
+.ui-colorpicker-adjust .ui-colorpicker-hex input {
+	width: 60px;
+}
