@@ -18,8 +18,8 @@ module.exports = function(grunt) {
     // Configurable paths for the application
     var appConfig = {
         app: require('./bower.json').appPath || 'app',
-        dist: 'demo',
-        build: 'build'
+        dist: require('./bower.json').appPath + '/demo',
+        build: require('./bower.json').appPath + '/build'
     };
 
     // Define the configuration for all the tasks
@@ -82,11 +82,10 @@ module.exports = function(grunt) {
                     open: true,
                     middleware: function(connect) {
                         return [
-                            connect.static('<%= yeoman.app %>'),
-                            connect().use(
-                                '/bower_components',
-                                connect.static('./bower_components')
-                            ),
+                            // connect().use(
+                            //     '/bower_components',
+                            //     connect.static('<%= yeoman.app %>/bower_components')
+                            // ),
                             connect.static(appConfig.app)
                         ];
                     }
@@ -97,7 +96,6 @@ module.exports = function(grunt) {
                     port: 9001,
                     middleware: function(connect) {
                         return [
-                            connect.static('<%= yeoman.app %>'),
                             connect.static('test'),
                             connect().use(
                                 '/bower_components',
@@ -142,17 +140,17 @@ module.exports = function(grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '<%= yeoman.app %>',
+                        '<%= yeoman.app %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/{,*/}*',
                         '!<%= yeoman.dist %>/.git*'
                     ]
                 }]
             },
-            server: '<%= yeoman.app %>',
+            server: '<%= yeoman.app %>/styles/{,*/}*.css',
             build: '<%= yeoman.build %>/**/*'
         },
 
-        // Add vendor prefixed styles
+        // Add vendor prefixed styles 会生成临时文件.sass-cache
         autoprefixer: {
             options: {
                 browsers: ['last 1 version']
@@ -316,13 +314,14 @@ module.exports = function(grunt) {
 
         // ng-annotate tries to make the code safe for minification automatically
         // by using the Angular long form for dependency injection.
+        // 可以添加，移除和重建 AngularJS 依赖注入注解
         ngAnnotate: {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>/concat/scripts',
+                    cwd: '.tmp/concat/scripts',
                     src: ['*.js', '!oldieshim.js'],
-                    dest: '<%= yeoman.app %>/concat/scripts'
+                    dest: '.tmp/concat/scripts'
                 }]
             }
         },
@@ -373,7 +372,7 @@ module.exports = function(grunt) {
                         ext: '.css'
                     }, {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/concat/scripts',
+                        cwd: '.tmp/concat/scripts',
                         src: '*.js',
                         dest: '<%= yeoman.build %>/scripts',
                         ext: '.map.js'
@@ -477,14 +476,14 @@ module.exports = function(grunt) {
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
-        'concat',
-        'ngAnnotate',
+        'concat',   /* 字段读取文件中的js、css生成合并文件*/
+        'ngAnnotate',   //添加，移除和重建 AngularJS 依赖注入注解
         'copy:dist',
         // 'cdnify',
         'cssmin',
         'uglify',
-        'filerev',
-        'usemin' //,
+        // 'filerev',  //重新命名
+        // 'usemin' //,
         // 'htmlmin'
     ]);
 

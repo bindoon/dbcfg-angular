@@ -535,7 +535,7 @@ angular.module('dashboardApp')
 
 
 
-angular.module('dashboardApp').run(['$templateCache', function($templateCache) {
+angular.module('dbcfgApp').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('views/about.html',

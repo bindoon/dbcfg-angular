@@ -1,0 +1,337 @@
+/* line 1, dashboard.scss */
+.sidebar-wrap {
+  float: left;
+  width: 189px;
+  min-height: 700px;
+  background: #f2f2f2;
+  border-right: 1px solid #ccc;
+  /*cursor:e-resize;*/
+}
+
+/* line 2, dashboard.scss */
+.main-wrap {
+  margin-left: 190px;
+  min-height: 100%;
+}
+
+/* line 3, dashboard.scss */
+.sidebar-title {
+  height: 40px;
+  line-height: 40px;
+  text-indent: 1em;
+  font-size: 24px;
+  text-align: left;
+}
+
+/* line 4, dashboard.scss */
+.sidebar-title h1 {
+  font-weight: normal;
+}
+
+/* line 5, dashboard.scss */
+.sidebar-content {
+  padding-top: 5px;
+}
+
+/* line 6, dashboard.scss */
+.sidebar-list li {
+  border: 1px solid #e5e5e5;
+  border-width: 1px 0;
+}
+
+/* line 7, dashboard.scss */
+.sidebar-list li .icon-font {
+  margin-right: 5px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* line 8, dashboard.scss */
+.sidebar-list li a {
+  padding: 0 16px 0 20px;
+  display: block;
+  height: 38px;
+  line-height: 38px;
+  color: #333;
+}
+
+/* line 9, dashboard.scss */
+.sidebar-list li a:hover {
+  background: #fff;
+  color: #1963AA;
+}
+
+/* line 10, dashboard.scss */
+.sub-menu {
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+/* line 11, dashboard.scss */
+.sub-menu li {
+  padding-left: 21px;
+}
+
+/* line 12, dashboard.scss */
+.sub-menu li.on {
+  background: #1963AA;
+}
+
+/* line 13, dashboard.scss */
+.sub-menu li.on a {
+  background: #1963AA;
+  color: #fff;
+}
+
+/* line 14, dashboard.scss */
+.sub-menu li.on .icon-font {
+  color: #fff;
+}
+
+/* line 15, dashboard.scss */
+.sub-menu .icon-font {
+  font-size: 11px;
+}
+
+/* main */
+/* line 17, dashboard.scss */
+.crumb-wrap {
+  height: 40px;
+  line-height: 39px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #f5f5f5;
+}
+
+/* line 18, dashboard.scss */
+.crumb-list {
+  padding-left: 12px;
+}
+
+/* line 19, dashboard.scss */
+.crumb-list .icon-font {
+  margin-right: 5px;
+}
+
+/* line 20, dashboard.scss */
+.crumb-step {
+  margin: 0 5px;
+  color: #b2c2e0;
+  font-family: serif;
+}
+
+/* line 21, dashboard.scss */
+.search-wrap {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 22, dashboard.scss */
+.search-tab tr {
+  line-height: 35px;
+}
+
+/* line 23, dashboard.scss */
+.search-tab th {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: normal;
+}
+
+/* line 24, dashboard.scss */
+.search-tab td {
+  padding: 0 5px;
+}
+
+/* line 25, dashboard.scss */
+.common-text {
+  height: 23px;
+  line-height: 23px;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* line 26, dashboard.scss */
+.result-wrap {
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 27, dashboard.scss */
+.result-title {
+  line-height: 35px;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+/* line 28, dashboard.scss */
+.comment-title {
+  line-height: 35px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* line 29, dashboard.scss */
+.result-list a {
+  margin-right: 15px;
+}
+
+/* line 30, dashboard.scss */
+.result-list i {
+  padding-right: 5px;
+}
+
+/* line 31, dashboard.scss */
+.result-tab {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+/* line 32, dashboard.scss */
+.result-tab th {
+  font-weight: normal;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* line 33, dashboard.scss */
+.result-tab th, .result-tab td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #e1e1e1;
+}
+
+/* line 34, dashboard.scss */
+.result-tab tr {
+  line-height: 35px;
+}
+
+/* line 35, dashboard.scss */
+.result-tab th.tc, .result-tab td.tc {
+  text-align: center;
+}
+
+/* line 36, dashboard.scss */
+.result-tab tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* line 37, dashboard.scss */
+.result-tab tr:hover {
+  background: #f1f1f1;
+}
+
+/* line 38, dashboard.scss */
+.result-tab tr.even-tr {
+  background: #e9fff2;
+}
+
+/* line 39, dashboard.scss */
+.comment-tab {
+  border-bottom: 1px solid #ddd;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* line 40, dashboard.scss */
+.comment-tab a {
+  float: left;
+}
+
+/* line 41, dashboard.scss */
+.comment-tab a.on {
+  padding: 0 15px;
+  background: #49afcd;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+/* config */
+/* line 43, dashboard.scss */
+.config-items {
+  margin-bottom: 25px;
+}
+
+/* line 44, dashboard.scss */
+.config-title {
+  margin-bottom: 10px;
+}
+
+/* line 45, dashboard.scss */
+.config-title h1 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* line 46, dashboard.scss */
+.config-title h1 i {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+/* line 47, dashboard.scss */
+.columns-title {
+  padding: 10px 0;
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+}
+
+/*.columns-title .comment-tab{padding-left: 0;}*/
+/* line 49, dashboard.scss */
+.visitor-img {
+  float: left;
+}
+
+/* line 50, dashboard.scss */
+.visitor-info {
+  float: left;
+  padding-left: 10px;
+  line-height: 23px;
+}
+
+/* line 51, dashboard.scss */
+.visitor-email {
+  color: #aaa;
+}
+
+/* line 52, dashboard.scss */
+.short-wrap a {
+  margin-right: 20px;
+}
+
+/* line 53, dashboard.scss */
+.short-wrap a i {
+  margin-right: 5px;
+}
+
+/* line 54, dashboard.scss */
+.res-lab {
+  display: inline-block;
+  width: 150px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+/* line 55, dashboard.scss */
+.sys-info-list li {
+  line-height: 35px;
+  border-bottom: 1px dashed #eaeaea;
+}
+
+/* line 56, dashboard.scss */
+.res-lab {
+  color: #909090;
+}
+
+/* line 57, dashboard.scss */
+.res-info {
+  font-size: 15px;
+}
+
+/* line 58, dashboard.scss */
+.sort-input {
+  width: 25px;
+  text-align: center;
+}

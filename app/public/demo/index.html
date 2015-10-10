@@ -8,8 +8,18 @@
 
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/vendor.3f3a7aa5.css">
-    <link rel="stylesheet" href="styles/main.9a14daf7.css">
+    <!-- build:css(app/public) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css'>
+    <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'>
+    <link rel='stylesheet' href='bower_components/jsoneditor/jsoneditor.css'>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(app/public) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- endbuild -->
   </head>
   <body ng-app="dashboardApp" >
     <!--[if lt IE 7]>
@@ -71,9 +81,32 @@
     <div editor-container ></div>
     <div jsoneditor-container ></div>
 
-    <script src="scripts/vendor.948b0294.js"></script>
+    <!-- build:js(app/public) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+    <script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+    <script src='bower_components/textAngular/dist/textAngular.min.js'></script>
+    <script src='bower_components/jsoneditor/jquery.jsoneditor.js'></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="scripts/scripts.093d46dd.js"></script>
+    <!-- build:js({.tmp,app/public}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/dbcfg.js"></script>
+    <script src="scripts/directives/mydirective.js"></script>
+    <script src="scripts/templates/base.js"></script>
+    <!-- endbuild -->
 
   </body>
 </html>
