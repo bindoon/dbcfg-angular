@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('dashboardApp', [
+  .module('dbcfgApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

@@ -26,8 +26,8 @@ function midway(app) {
     app.use(express.static(path.join(__dirname, 'app/public')));
 
     app.use(function(req, res, next) {
-        // res.header("Access-Control-Allow-Origin", "*");
-        // res.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
+        res.header("Access-Control-Allow-Origin", "*");
+        res.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
 
         var params = req.query;
         params = extend(params,req.body);

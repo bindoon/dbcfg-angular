@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the angularApp
  */
-angular.module('dashboardApp')
+angular.module('dbcfgApp')
   .controller('DbCfgCtrl', ['$scope','$rootScope','$http','$q','$routeParams','$location' ,function ($scope, $rootScope, $http, $q,$routeParams,$location) {
 
     // $scope.htmlcontent = 'test';

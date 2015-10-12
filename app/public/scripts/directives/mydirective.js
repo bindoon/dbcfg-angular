@@ -6,7 +6,7 @@
  * @description
  * # myDirective
  */
-angular.module('dashboardApp')
+angular.module('dbcfgApp')
     .directive('msgBox', ['$rootScope','$timeout', '$sce', function ($rootScope,$timeout,$sce) {
         return {
             restrict: 'A',
@@ -183,7 +183,7 @@ angular.module('dashboardApp')
             replace:true,
             templateUrl: 'views/editor.html',
 
-            link: function ($scope,element,attrs) { 
+            link: function ($scope,element,attrs) {
 
                 $scope.target = null;
                 //确认按钮
@@ -204,7 +204,7 @@ angular.module('dashboardApp')
         return {
             restrict: 'A',
             scope: true,
-            link: function (scope, element, attrs, editorContainer) { 
+            link: function (scope, element, attrs, editorContainer) {
                 element.on('click',function(){
                     rootScope.$broadcast('showEditor',element);
                 })
@@ -218,13 +218,13 @@ angular.module('dashboardApp')
             replace:true,
             templateUrl: 'views/jsoneditor.html',
 
-            link: function ($scope,element,attrs) { 
+            link: function ($scope,element,attrs) {
 
                 rootScope.$on('showjsonEditor',function(event, target) {
                     element.modal('show');
                     var json = JSON.parse(target.val());
-                    element.find('.json-editor').jsonEditor(json,{ change: function(newjson) {  
-                        target.val(JSON.stringify(newjson));  
+                    element.find('.json-editor').jsonEditor(json,{ change: function(newjson) {
+                        target.val(JSON.stringify(newjson));
                     }});
                 })
             }
@@ -234,7 +234,7 @@ angular.module('dashboardApp')
         return {
             restrict: 'A',
             scope: true,
-            link: function (scope, element, attrs, editorContainer) { 
+            link: function (scope, element, attrs, editorContainer) {
                 element.on('click',function(){
                     rootScope.$broadcast('showjsonEditor',element);
                 })

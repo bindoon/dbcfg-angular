@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the angularApp
  */
-angular.module('dashboardApp')
+angular.module('dbcfgApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

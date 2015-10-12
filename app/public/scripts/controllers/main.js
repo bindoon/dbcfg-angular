@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the angularApp
  */
-angular.module('dashboardApp')
+angular.module('dbcfgApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
