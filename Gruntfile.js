@@ -498,4 +498,9 @@ module.exports = function(grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('dev',[
+        'connect:livereload',
+        'watch'
+    ]);
 };

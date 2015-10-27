@@ -1,3 +1,4 @@
+/* 左侧菜单 */
 .sidebar-wrap{float: left;width: 189px;min-height:700px;background: #f2f2f2;border-right:1px solid #ccc;/*cursor:e-resize;*/}
 .main-wrap{margin-left: 190px;min-height:100%;}
 .sidebar-title{height: 40px;line-height: 40px;text-indent:1em;font-size: 24px;text-align: left;}
@@ -39,6 +40,8 @@
 .comment-tab{border-bottom: 1px solid #ddd;padding-left: 15px;margin-bottom: 10px;}
 .comment-tab a{float: left;}
 .comment-tab a.on{padding: 0 15px;background: #49afcd;color: #fff;border-radius:5px 5px 0 0;}
+
+
 /* config */
 .config-items{margin-bottom: 25px;}
 .config-title{margin-bottom: 10px;}
@@ -56,3 +59,12 @@
 .res-lab{color: #909090;}
 .res-info{font-size: 15px;}
 .sort-input{width: 25px;text-align: center;}
+.hidden {display:none}
+
+.angular-ui-tree-handle {
+    margin: 3px;
+}
+.active {
+    border:1px dashed #785;
+    padding: 2px;
+}

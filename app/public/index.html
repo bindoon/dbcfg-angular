@@ -14,6 +14,8 @@
     <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'>
     <link rel='stylesheet' href='bower_components/jsoneditor/jsoneditor.css'>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/source/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(app/public) styles/main.css -->
@@ -45,37 +47,10 @@
         </div>
     </div>
     <div ng-controller="MainCtrl">
-      <div class="sidebar-wrap">
-        <div class="sidebar-title">
-            <h1>菜单</h1>
-        </div>
-        <div class="sidebar-content" >
-            <ul ng-cloak class="sidebar-list" ng-init="routes=[
-              {
-                name: '常用操作', router:'/app', href:'javascript:;',
-                subroutes:[
-                  {name: '类目管理', router:'/dbcfg/category'},
-                  {name: '专家管理', router:'/dbcfg/expert'},
-                  {name: '博文管理', router:'/dbcfg/article'},
-                  {name: '首页管理', router:'/dbcfg/indexdata'},
-                  {name: '接口配置', router:'/dbcfg/cgicfg'}
-                ]
-              }
-            ]">
-              <li ng-repeat="route in routes">
-                  <a href="javascript:;">{{route.name}}</a>
-                  <ul class="sub-menu" ng-if="route.subroutes">
-                      <li ng-repeat="subroute in route.subroutes" class={{subroute.class}} ng-class="{'on':checkActive(currentActiveRoute, subroute.router)}"><a ng-href="#{{subroute.router}}">{{subroute.name}}</a></li>
-                  </ul>
-              </li>
-            </ul>
-        </div>
-      </div>
-
-      <div class="main-wrap" ng-view >
-
-      </div>
+        <div menu ></div>
+        <div class="main-wrap" ng-view ></div>
     </div>
+
 
     <div msg-box></div>
     <div editor-container ></div>
@@ -97,6 +72,7 @@
     <script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
     <script src='bower_components/textAngular/dist/textAngular.min.js'></script>
     <script src='bower_components/jsoneditor/jquery.jsoneditor.js'></script>
+    <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -104,9 +80,14 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/dbcfg.js"></script>
+    <script src="scripts/controllers/tree.js"></script>
     <script src="scripts/directives/mydirective.js"></script>
+    <script src="scripts/servers/myserver.js"></script>
     <script src="scripts/templates/base.js"></script>
     <!-- endbuild -->
 
+<script>//<![CDATA[
+document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
+//]]></script>
   </body>
 </html>

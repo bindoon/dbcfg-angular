@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 
 //var dbaddress = 'hanstyle:whoami@12345@127.0.0.1';
-var dbaddress = '121.41.83.170';//'127.0.0.1';
+//var dbaddress = '121.41.83.170';
+var dbaddress = '127.0.0.1';
 var dbName = 'hanstyle';
 
 console.error('[mongodb] db address:%s',dbaddress);

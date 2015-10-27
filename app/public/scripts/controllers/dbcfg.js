@@ -26,7 +26,7 @@ angular.module('dbcfgApp')
             $scope.currentActiveRoute  = $location.path();
         });
 
-        var apiUrl = 'http://'+location.host.split(':')[0]+':3000/dbcfg';
+        var apiUrl = '/dbcfg';
         $scope.condition = {};
         $scope.pagination = {
             totalItems:0,

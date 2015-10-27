@@ -240,8 +240,33 @@ angular.module('dbcfgApp')
                 })
             }
         }
-    }])
+    }]).
+    directive('menu',['$http','$q','$rootScope',function($http,$q,rootScope){
+        return {
+            restrict: 'A',
+            scope: true,
+            templateUrl: 'views/menu.html',
+            link: function ($scope,element,attrs) {
+                var apiUrl = '/menu';
+                $http({
+                    method: 'GET',
+                    url: apiUrl,
+                    cache: false
+                }).success(function(data) {
+                    $scope.routes = data;
 
+                }).error(function() {
+                    rootScope.$broadcast('msgBox', {
+                        msg: {
+                            content: "menu接口错误",
+                            type: "error"
+                        },
+                        time: 3000,
+                    });
+                });
+            }
+        }
+    }])
 ;
 
 

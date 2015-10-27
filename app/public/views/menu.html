@@ -1,0 +1,15 @@
+<div class="sidebar-wrap">
+  <div class="sidebar-title">
+      <h1>菜单</h1>
+  </div>
+  <div class="sidebar-content" >
+      <ul ng-cloak class="sidebar-list" >
+        <li ng-repeat="route in routes">
+            <a href="javascript:;">{{route.name}}</a>
+            <ul class="sub-menu" ng-if="route.subroutes">
+                <li ng-repeat="subroute in route.subroutes" class={{subroute.class}} ng-class="{'on':checkActive(currentActiveRoute, subroute.router)}"><a ng-href="#{{subroute.router}}">{{subroute.name}}</a></li>
+            </ul>
+        </li>
+      </ul>
+  </div>
+</div>

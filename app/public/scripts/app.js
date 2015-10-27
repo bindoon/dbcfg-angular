@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'textAngular',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ui.tree'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -28,6 +29,10 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/tree', {
+        templateUrl: 'views/tree.html',
+        controller: 'TreeCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -39,11 +39,13 @@ var dbHelper = {
     findOneAndUpdate: function(model, conditions, update, options) {
         return new Promise(function(resolve, reject) {
             model.findOneAndUpdate(conditions,update,options,function(error) {
-                if (error)
+                if (error){
                     reject(error);
+                    console.log(error);
+                }
                 resolve();
             })
-        })      
+        })
     },
     remove : function(model, conditions) {
         return new Promise(function(resolve, reject) {

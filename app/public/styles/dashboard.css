@@ -1,4 +1,6 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000031}}
+@charset "UTF-8";
+/* 左侧菜单 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000032}}
 .sidebar-wrap {
   float: left;
   width: 189px;
@@ -8,13 +10,13 @@
   /*cursor:e-resize;*/
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000033}}
 .main-wrap {
   margin-left: 190px;
   min-height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000034}}
 .sidebar-title {
   height: 40px;
   line-height: 40px;
@@ -23,30 +25,30 @@
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000035}}
 .sidebar-title h1 {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000036}}
 .sidebar-content {
   padding-top: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000037}}
 .sidebar-list li {
   border: 1px solid #e5e5e5;
   border-width: 1px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000038}}
 .sidebar-list li .icon-font {
   margin-right: 5px;
   color: #888;
   font-size: 14px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000039}}
 .sidebar-list li a {
   padding: 0 16px 0 20px;
   display: block;
@@ -55,46 +57,46 @@
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000310}}
 .sidebar-list li a:hover {
   background: #fff;
   color: #1963AA;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000311}}
 .sub-menu {
   border-top: 1px solid #e5e5e5;
   background: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000312}}
 .sub-menu li {
   padding-left: 21px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000313}}
 .sub-menu li.on {
   background: #1963AA;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000314}}
 .sub-menu li.on a {
   background: #1963AA;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000315}}
 .sub-menu li.on .icon-font {
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000316}}
 .sub-menu .icon-font {
   font-size: 11px;
 }
 
 /* main */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000318}}
 .crumb-wrap {
   height: 40px;
   line-height: 39px;
@@ -102,47 +104,47 @@
   background: #f5f5f5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000319}}
 .crumb-list {
   padding-left: 12px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000320}}
 .crumb-list .icon-font {
   margin-right: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000321}}
 .crumb-step {
   margin: 0 5px;
   color: #b2c2e0;
   font-family: serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000322}}
 .search-wrap {
   padding: 15px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000323}}
 .search-tab tr {
   line-height: 35px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000324}}
 .search-tab th {
   text-align: right;
   padding-right: 10px;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000325}}
 .search-tab td {
   padding: 0 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000326}}
 .common-text {
   height: 23px;
   line-height: 23px;
@@ -152,94 +154,94 @@
   border-radius: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000327}}
 .result-wrap {
   padding: 10px 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000328}}
 .result-title {
   line-height: 35px;
   padding-bottom: 5px;
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000329}}
 .comment-title {
   line-height: 35px;
   margin-bottom: 10px;
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000330}}
 .result-list a {
   margin-right: 15px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000331}}
 .result-list i {
   padding-right: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000332}}
 .result-tab {
   border-collapse: collapse;
   border: 1px solid #ddd;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000333}}
 .result-tab th {
   font-weight: normal;
   font-size: 15px;
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000334}}
 .result-tab th, .result-tab td {
   padding: 5px;
   border-bottom: 1px solid #ddd;
   border-right: 1px solid #e1e1e1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000335}}
 .result-tab tr {
   line-height: 35px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000336}}
 .result-tab th.tc, .result-tab td.tc {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000337}}
 .result-tab tr:nth-child(odd) {
   background: #f9f9f9;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000338}}
 .result-tab tr:hover {
   background: #f1f1f1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000339}}
 .result-tab tr.even-tr {
   background: #e9fff2;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000340}}
 .comment-tab {
   border-bottom: 1px solid #ddd;
   padding-left: 15px;
   margin-bottom: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000341}}
 .comment-tab a {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000342}}
 .comment-tab a.on {
   padding: 0 15px;
   background: #49afcd;
@@ -248,29 +250,29 @@
 }
 
 /* config */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000346}}
 .config-items {
   margin-bottom: 25px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000347}}
 .config-title {
   margin-bottom: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000348}}
 .config-title h1 {
   font-size: 14px;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000349}}
 .config-title h1 i {
   margin-right: 5px;
   font-size: 12px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000350}}
 .columns-title {
   padding: 10px 0;
   height: 35px;
@@ -279,34 +281,34 @@
 }
 
 /*.columns-title .comment-tab{padding-left: 0;}*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000352}}
 .visitor-img {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000353}}
 .visitor-info {
   float: left;
   padding-left: 10px;
   line-height: 23px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000354}}
 .visitor-email {
   color: #aaa;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000355}}
 .short-wrap a {
   margin-right: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000356}}
 .short-wrap a i {
   margin-right: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000357}}
 .res-lab {
   display: inline-block;
   width: 150px;
@@ -314,24 +316,40 @@
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000358}}
 .sys-info-list li {
   line-height: 35px;
   border-bottom: 1px dashed #eaeaea;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000359}}
 .res-lab {
   color: #909090;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000360}}
 .res-info {
   font-size: 15px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000361}}
 .sort-input {
   width: 25px;
   text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000362}}
+.hidden {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000364}}
+.angular-ui-tree-handle {
+  margin: 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/eden\/work\/bindoon\/dbcfg\/app\/public\/styles\/dashboard\.scss}line{font-family:\0000367}}
+.active {
+  border: 1px dashed #785;
+  padding: 2px;
 }
