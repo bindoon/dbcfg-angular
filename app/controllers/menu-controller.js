@@ -4,6 +4,10 @@ var mongoose = require('mongoose');
 var jsonprc = require('../biz/jsonprc')
 var BSON = require('bson').BSONPure;
 
+var util = require('util');
+
+
+
 //配置后台字段映射
 mongoose.model('menu', new mongoose.Schema({
     id: String,
@@ -18,28 +22,42 @@ mongoose.model('menu', new mongoose.Schema({
 var Menu = mongoose.model('menu');
 
 
+
+function createTree(list) {
+    var map = {};
+    for (var i = 0; i < list.length; i++) {
+
+        var item = util._extend({}, list[i]._doc); //不这么改，扩展不了。不知道是怎么做到的约束
+        item.items = [];
+        map[item.id] = item;
+    };
+
+    var result = [];
+
+    for (var i in map) {
+        if (map[i].parentid == 0) {
+            result.push(map[i]);
+        } else if (map[i].parentid in map) {
+            map[map[i].parentid].items.push(map[i]);
+        }
+    }
+
+    return result.sort(function(a, b) {
+        return a.order > b.order;
+    });
+}
+
 exports.menu = function(req, res, next) {
-    res.send([{
-        name: '常用操作',
-        router: '/app',
-        href: 'javascript:;',
-        subroutes: [{
-            name: '类目管理',
-            router: '/dbcfg/category'
-        }, {
-            name: '专家管理',
-            router: '/dbcfg/expert'
-        }, {
-            name: '博文管理',
-            router: '/dbcfg/article'
-        }, {
-            name: '首页管理',
-            router: '/dbcfg/indexdata'
-        }, {
-            name: '接口配置',
-            router: '/dbcfg/cgicfg'
-        }]
-    }]);
+    co(function*() {
+        var list = yield dbHelper.query(Menu, {});
+        return createTree(list);
+    }).then(function(data) {
+        res.send({
+            result: {
+                list: data
+            }
+        })
+    })
 }
 
 function* queryData(usermodel, condition, options) {
@@ -73,31 +91,6 @@ function* removeData(usermodel, list) {
     return 0;
 }
 
-var util = require('util');
-
-function createTree(list) {
-    var map = {};
-    for (var i = 0; i < list.length; i++) {
-
-        var item = util._extend({}, list[i]._doc);  //不这么改，扩展不了。不知道是怎么做到的约束
-        item.items = [];
-        map[item.id] = item;
-    };
-
-    var result = [];
-
-    for (var i in map) {
-        if (map[i].parentid == 0) {
-            result.push(map[i]);
-        } else if( map[i].parentid in map){
-            map[map[i].parentid].items.push(map[i]);
-        }
-    }
-
-    return result.sort(function(a,b){
-        return a.order > b.order;
-    });
-}
 
 exports.menucfg = function(req, res, next) {
     var op = req.getParam('op');
@@ -132,10 +125,14 @@ exports.menucfg = function(req, res, next) {
         })
     } else {
         co(function*() {
-            var list =  yield dbHelper.query(Menu, {});
+            var list = yield dbHelper.query(Menu, {});
             return createTree(list);
         }).then(function(data) {
-            res.send({result:{list:data}})
+            res.send({
+                result: {
+                    list: data
+                }
+            })
         })
     }
 }

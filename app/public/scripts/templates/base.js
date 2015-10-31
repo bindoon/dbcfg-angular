@@ -29,7 +29,14 @@ angular.module('dbcfgApp').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('views/menu.html',
-    "<div class=sidebar-wrap><div class=sidebar-title><h1>菜单</h1></div><div class=sidebar-content><ul ng-cloak class=sidebar-list><li ng-repeat=\"route in routes\"><a href=javascript:;>{{route.name}}</a><ul class=sub-menu ng-if=route.subroutes><li ng-repeat=\"subroute in route.subroutes\" class={{subroute.class}} ng-class=\"{'on':checkActive(currentActiveRoute, subroute.router)}\"><a ng-href=#{{subroute.router}}>{{subroute.name}}</a></li></ul></li></ul></div></div>"
+    "<div class=sidebar-wrap><div class=sidebar-title><h1>菜单</h1></div><div class=sidebar-content><div ui-tree=options class=menu-container data-drag-enabled=false><ol ui-tree-nodes ng-model=list><li ng-repeat=\"item in list\" ui-tree-node ng-include=\"'menu_renderer.html'\"></li></ol></div></div></div><script type=text/ng-template id=menu_renderer.html><a class=\"btn  btn-xs menu-node\" ng-if=\"item.items.length>0\" data-nodrag ng-click=\"toggle(this)\">\n" +
+    "    <span class=\"glyphicon\" ng-class=\"{' glyphicon-plus': collapsed, 'glyphicon-minus': !collapsed}\"></span>{{item.title}}\n" +
+    "  </a>\n" +
+    "  <a class=\"btn  btn-xs menu-node\" ng-if=\"item.items.length==0\" data-nodrag ng-href=\"{{item.link}}\" >{{item.title}}</a>\n" +
+    "  <ol ui-tree-nodes=\"options\" ng-model=\"item.items\" ng-class=\"{hidden: collapsed}\">\n" +
+    "    <li ng-if=\"item.items\" ng-repeat=\"item in item.items\" ui-tree-node ng-include=\"'menu_renderer.html'\">\n" +
+    "    </li>\n" +
+    "  </ol></script>"
   );
 
 
@@ -40,16 +47,17 @@ angular.module('dbcfgApp').run(['$templateCache', function($templateCache) {
 
   $templateCache.put('views/tree.html',
     "<div class=col-lg-6><div class=page-header><h1>目录树 <small>拖拽点击编辑</small></h1></div><a href=javascript:; ng-click=newItem()>新增根节点</a><script type=text/ng-template id=items_renderer.html><div ui-tree-handle >\n" +
-    "    <a class=\"btn  btn-xs\" data-nodrag ng-click=\"toggle(this)\"><span class=\"glyphicon\" ng-class=\"{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}\"></span></a>\n" +
-    "    {{item.title}}\n" +
-    "    <a class=\"pull-right btn btn-danger btn-xs\" data-nodrag ng-click=\"remove(this)\"><span class=\"glyphicon glyphicon-remove\"></span></a>\n" +
-    "    <a class=\"pull-right btn btn-primary btn-xs\" data-nodrag ng-click=\"newSubItem(this);\" style=\"margin-right: 8px;\"><span class=\"glyphicon glyphicon-plus\"></span></a>\n" +
-    "    <a class=\"pull-right btn btn-success btn-xs\" data-nodrag ng-click=\"editItem(this)\" style=\"margin-right: 8px;\"><span class=\"glyphicon glyphicon-edit\"></span></a>\n" +
-    "  </div>\n" +
-    "  <ol ui-tree-nodes=\"options\" ng-model=\"item.items\" ng-class=\"{hidden: collapsed}\">\n" +
-    "    <li ng-if=\"item.items\" ng-repeat=\"item in item.items\" ui-tree-node ng-include=\"'items_renderer.html'\">\n" +
-    "    </li>\n" +
-    "  </ol></script><div ui-tree=options><ol ui-tree-nodes ng-model=list><li ng-repeat=\"item in list\" ui-tree-node ng-include=\"'items_renderer.html'\"></li></ol></div></div><div class=col-lg-6><div class=page-header><h1>节点信息 <small>详细信息</small></h1></div><form ng-if=itemShow.id class=form-horizontal style=\"background-color: #f5f5f5;padding: 9.5px;border: 1px solid #ccc\"><div class=form-group><label for=inputTitle class=\"col-sm-2 control-label\">标题</label><div class=col-sm-10><input id=inputTitle class=form-control data-text={{itemShow.title}} value={{itemShow.title}} placeholder=title></div></div><div class=form-group><label for=inputLink class=\"col-sm-2 control-label\">链接</label><div class=col-sm-10><input class=form-control id=inputLink value={{itemShow.link}} placeholder=\"\"></div></div><div class=form-group><label for=target class=\"col-sm-2 control-label\">打开方式</label><div class=col-sm-10><select id=selectTarget value={{itemShow.target}}><option value=0>本窗口</option><option value=1>新窗口</option></select></div></div><div class=form-group><div class=\"col-sm-offset-2 col-sm-10\"><button type=submit class=\"btn btn-default\" ng-click=saveItem()>保存</button></div></div></form></div><div class=col-lg-12><button type=button class=\"btn btn-primary\" data-ok=modal ng-click=saveAll()>保存</button></div>"
+    "      <a class=\"btn  btn-xs btn-chevron\" ng-if=\"item.items.length>0\" data-nodrag ng-click=\"toggle(this)\"><span class=\"glyphicon\" ng-class=\"{'glyphicon glyphicon-plus': collapsed, 'glyphicon glyphicon-minus': !collapsed}\"></span></a>\n" +
+    "      {{item.title}}\n" +
+    "\n" +
+    "      <a class=\"pull-right btn btn-danger btn-xs\" data-nodrag ng-click=\"remove(this)\"><span class=\"glyphicon glyphicon-remove\"></span></a>\n" +
+    "      <a class=\"pull-right btn btn-primary btn-xs\" data-nodrag ng-click=\"newSubItem(this);\" style=\"margin-right: 8px;\"><span class=\"glyphicon glyphicon-plus\"></span></a>\n" +
+    "      <a class=\"pull-right btn btn-success btn-xs\" data-nodrag ng-click=\"editItem(this)\" style=\"margin-right: 8px;\"><span class=\"glyphicon glyphicon-edit\"></span></a>\n" +
+    "    </div>\n" +
+    "    <ol ui-tree-nodes=\"options\" ng-model=\"item.items\" ng-class=\"{hidden: collapsed}\">\n" +
+    "      <li ng-if=\"item.items\" ng-repeat=\"item in item.items\" ui-tree-node ng-include=\"'items_renderer.html'\">\n" +
+    "      </li>\n" +
+    "    </ol></script><div ui-tree=options class=tree-container><ol ui-tree-nodes ng-model=list><li ng-repeat=\"item in list\" ui-tree-node ng-include=\"'items_renderer.html'\"></li></ol></div></div><div class=col-lg-6><div class=page-header><h1>节点信息 <small>详细信息</small></h1></div><form ng-if=itemShow.id class=form-horizontal style=\"background-color: #f5f5f5;padding: 9.5px;border: 1px solid #ccc\"><div class=form-group><label for=inputTitle class=\"col-sm-2 control-label\">标题</label><div class=col-sm-10><input id=inputTitle class=form-control data-text={{itemShow.title}} value={{itemShow.title}} placeholder=title></div></div><div class=form-group><label for=inputLink class=\"col-sm-2 control-label\">链接</label><div class=col-sm-10><input class=form-control id=inputLink value={{itemShow.link}} placeholder=\"\"></div></div><div class=form-group><label for=target class=\"col-sm-2 control-label\">打开方式</label><div class=col-sm-10><select id=selectTarget value={{itemShow.target}}><option value=0>本窗口</option><option value=1>新窗口</option></select></div></div><div class=form-group><div class=\"col-sm-offset-2 col-sm-10\"><button type=submit class=\"btn btn-default\" ng-click=saveItem()>保存</button></div></div></form></div><div class=col-lg-12><button type=button class=\"btn btn-primary\" data-ok=modal ng-click=saveAll()>保存</button></div>"
   );
 
 }]);

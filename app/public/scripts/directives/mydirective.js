@@ -253,8 +253,7 @@ angular.module('dbcfgApp')
                     url: apiUrl,
                     cache: false
                 }).success(function(data) {
-                    $scope.routes = data;
-
+                    $scope.list = data.result.list;
                 }).error(function() {
                     rootScope.$broadcast('msgBox', {
                         msg: {
@@ -264,6 +263,12 @@ angular.module('dbcfgApp')
                         time: 3000,
                     });
                 });
+
+
+                $scope.toggle = function(scope) {
+                    scope.toggle();
+                };
+
             }
         }
     }])

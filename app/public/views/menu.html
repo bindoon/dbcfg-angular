@@ -1,15 +1,22 @@
 <div class="sidebar-wrap">
   <div class="sidebar-title">
-      <h1>菜单</h1>
+    <h1>菜单</h1>
   </div>
   <div class="sidebar-content" >
-      <ul ng-cloak class="sidebar-list" >
-        <li ng-repeat="route in routes">
-            <a href="javascript:;">{{route.name}}</a>
-            <ul class="sub-menu" ng-if="route.subroutes">
-                <li ng-repeat="subroute in route.subroutes" class={{subroute.class}} ng-class="{'on':checkActive(currentActiveRoute, subroute.router)}"><a ng-href="#{{subroute.router}}">{{subroute.name}}</a></li>
-            </ul>
-        </li>
-      </ul>
+    <div ui-tree="options" class="menu-container" data-drag-enabled="false">
+      <ol ui-tree-nodes ng-model="list" >
+        <li ng-repeat="item in list" ui-tree-node ng-include="'menu_renderer.html'"></li>
+      </ol>
+    </div>
   </div>
 </div>
+<script type="text/ng-template" id="menu_renderer.html">
+  <a class="btn  btn-xs menu-node" ng-if="item.items.length>0" data-nodrag ng-click="toggle(this)">
+    <span class="glyphicon" ng-class="{' glyphicon-plus': collapsed, 'glyphicon-minus': !collapsed}"></span>{{item.title}}
+  </a>
+  <a class="btn  btn-xs menu-node" ng-if="item.items.length==0" data-nodrag ng-href="{{item.link}}" >{{item.title}}</a>
+  <ol ui-tree-nodes="options" ng-model="item.items" ng-class="{hidden: collapsed}">
+    <li ng-if="item.items" ng-repeat="item in item.items" ui-tree-node ng-include="'menu_renderer.html'">
+    </li>
+  </ol>
+</script>

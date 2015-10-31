@@ -4,16 +4,7 @@
 .sidebar-title{height: 40px;line-height: 40px;text-indent:1em;font-size: 24px;text-align: left;}
 .sidebar-title h1{font-weight: normal;}
 .sidebar-content{padding-top: 5px;}
-.sidebar-list li{border:1px solid #e5e5e5;border-width:1px 0;}
-.sidebar-list li .icon-font{margin-right: 5px;color: #888;font-size: 14px;}
-.sidebar-list li a{padding: 0 16px 0 20px;display: block;height: 38px;line-height: 38px;color: #333;}
-.sidebar-list li a:hover{background: #fff;color: #1963AA;}
-.sub-menu{border-top: 1px solid #e5e5e5;background: #fff;}
-.sub-menu li{padding-left: 21px;}
-.sub-menu li.on{background: #1963AA;}
-.sub-menu li.on a{background: #1963AA;color: #fff;}
-.sub-menu li.on .icon-font{color: #fff;}
-.sub-menu .icon-font{font-size: 11px;}
+
 /* main */
 .crumb-wrap{height: 40px;line-height: 39px;border-bottom: 1px solid #e5e5e5;background: #f5f5f5;}
 .crumb-list{padding-left: 12px;}
@@ -61,10 +52,38 @@
 .sort-input{width: 25px;text-align: center;}
 .hidden {display:none}
 
-.angular-ui-tree-handle {
-    margin: 3px;
+
+.tree-container {
+    padding-left: 10px;
+    .angular-ui-tree-handle {
+        margin: 3px;
+    }
+
+    .btn-chevron {
+        position: absolute;
+        left: -18px;
+    }
+
+    .angular-ui-tree-node {
+        .active {
+            border:1px dashed #785;
+            padding: 2px;
+        }
+        .angular-ui-tree-nodes {
+            padding-left: 15px;
+        }
+    }
 }
-.active {
-    border:1px dashed #785;
-    padding: 2px;
+
+.menu-container {
+    padding-left: 5px;
+
+    .menu-node {
+        margin-left: 5px;
+        .glyphicon {
+            position: absolute;
+            left: -2px;
+            top: 4px;
+        }
+    }
 }
